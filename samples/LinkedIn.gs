@@ -7,7 +7,7 @@ var CLIENT_SECRET = '...';
 function run() {
   var service = getService();
   if (service.hasAccess()) {
-    var url = 'https://api.linkedin.com/v1/people/~?format=json';
+    var url = 'https://api.linkedin.com/v2/me';
     var response = UrlFetchApp.fetch(url, {
       headers: {
         'Authorization': 'Bearer ' + service.getAccessToken()
